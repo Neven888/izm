@@ -14,6 +14,9 @@ import VariousVersion from './components/pages/VariousVersion';
 import Majorit from './components/pages/Majorit';
 import BlogSingle from './components/pages/BlogSingle';
 import Error from './components/parts/Error';
+import Login from './components/pages/Login';
+import Register from './components/pages/Register';
+import CommodUs from './components/pages/CommodUs';
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
         <Route path="/majorit" element={<Majorit />} />
         <Route path="/pivarski-blog/:slug" element={<BlogSingle />} />
         <Route path="*" element={<Error />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/commodus" element={<CommodUs />} />
       </Routes>
       <Footer />
     </div>

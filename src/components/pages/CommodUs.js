@@ -1,8 +1,9 @@
 import React from "react";
+import Login from "./Login";
 
 const CommodUs = () => {
     return (
-        <h1>Prazna CommodUs komponenta</h1>
+        <Login />
     );
     }
 
