@@ -6,30 +6,30 @@ import Slider from "react-slick";
 const Home = () => {
     return (
         <>
-        <div class="slick-carousel">
-        <div class="slide">
-          <img src="https://placehold.co/1428x671" alt="Image 1" class="slajd" />
-          <div class="title">LOREM IPSUM IS SIMPLYS</div>
-          <div class="subtitle">Lorem Ipsum is simply dummy text of the printing</div>
-          <div class="button rounded-pill brojgumb">(123) 456-7890</div>
+        <Slider {...{arrows: true, infinite: true, speed: 500, slidesToShow: 1, slidesToScroll: 1, autoplay: true, autoplaySpeed: 3000}} className="slider">
+        <div className="slide">
+          <img src="https://placehold.co/1428x671" alt="Image 1" className="slajd" />
+          <div className="title">LOREM IPSUM IS SIMPLYS</div>
+          <div className="subtitle">Lorem Ipsum is simply dummy text of the printing</div>
+          <div className="button rounded-pill brojgumb">(123) 456-7890</div>
         </div>
-        <div class="slide">
-          <img src="https://placehold.co/1428x671" alt="Image 1" class="slajd" />
-          <div class="title">LOREM IPSUM IS SIMPLYS</div>
-          <div class="subtitle">Lorem Ipsum is simply dummy text of the printing</div>
-          <div class="button rounded-pill brojgumb">(123) 456-7890</div>
+        <div className="slide">
+          <img src="https://placehold.co/1428x671" alt="Image 1" className="slajd" />
+          <div className="title">LOREM IPSUM IS SIMPLYS</div>
+          <div className="subtitle">Lorem Ipsum is simply dummy text of the printing</div>
+          <div className="button rounded-pill brojgumb">(123) 456-7890</div>
         </div>
-        <div class="slide">
-          <img src="https://placehold.co/1428x671" alt="Image 1" class="slajd" />
-          <div class="title">LOREM IPSUM IS SIMPLYS</div>
-          <div class="subtitle">Lorem Ipsum is simply dummy text of the printing</div>
-          <div class="button rounded-pill brojgumb">(123) 456-7890</div>
+        <div className="slide">
+          <img src="https://placehold.co/1428x671" alt="Image 1" className="slajd" />
+          <div className="title">LOREM IPSUM IS SIMPLYS</div>
+          <div className="subtitle">Lorem Ipsum is simply dummy text of the printing</div>
+          <div className="button rounded-pill brojgumb">(123) 456-7890</div>
         </div>
-      </div>
-    <section class="prvi-section py-4">
-      <div class="container">
-        <div class="row justify-content-center">
-        <div class="col-md-8 mx-5 text-center pomagaj">
+      </Slider>
+    <section className="prvi-section py-4">
+      <div className="container">
+        <div className="row justify-content-center">
+        <div className="col-md-8 mx-5 text-center pomagaj">
           <img src="https://placehold.co/300x300" alt="Placeholder" />
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -59,56 +59,85 @@ const Home = () => {
 
     <section>
       <div class="container">
-        <div class="row text-center py-5">
-          <h1 class="pb-4 mb-4">LOREM IPSUM IS SIMPLY DUMMY</h1>
-          <div class="responsive">
+        <div className="row text-center py-5">
+          <h1 className="pb-4 mb-4">LOREM IPSUM IS SIMPLY DUMMY</h1>
+          <Slider {...{dots: true, arrows: false, infinite: true, speed: 500, slidesToShow: 5, slidesToScroll: 5, initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]}} className="responsiv">
             <div>
-              <img src="https://placehold.co/130x90" alt="Image" class="responsiv" />
+              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
             </div>
             <div>
-              <img src="https://placehold.co/130x90" alt="Image" class="responsiv" />
+              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
             </div>
             <div>
-              <img src="https://placehold.co/130x90" alt="Image" class="responsiv" />
+              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
             </div>
             <div>
-              <img src="https://placehold.co/130x90" alt="Image" class="responsiv" />
+              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
             </div>
             <div>
-              <img src="https://placehold.co/130x90" alt="Image" class="responsiv" />
+              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
             </div>
             <div>
-              <img src="https://placehold.co/130x90" alt="Image" class="responsiv" />
+              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
             </div>
             <div>
-              <img src="https://placehold.co/130x90" alt="Image" class="responsiv" />
+              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
             </div>
             <div>
-              <img src="https://placehold.co/130x90" alt="Image" class="responsiv" />
+              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
             </div>
             <div>
-              <img src="https://placehold.co/130x90" alt="Image" class="responsiv" />
+              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
             </div>
             <div>
-              <img src="https://placehold.co/130x90" alt="Image" class="responsiv" />
+              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
             </div>
             <div>
-              <img src="https://placehold.co/130x90" alt="Image" class="responsiv" />
+              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
             </div>
             <div>
-              <img src="https://placehold.co/130x90" alt="Image" class="responsiv" />
-            <div>
-              <img src="https://placehold.co/130x90" alt="Image" class="responsiv" />
+              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
             </div>
             <div>
-              <img src="https://placehold.co/130x90" alt="Image" class="responsiv" />
+              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
             </div>
             <div>
-              <img src="https://placehold.co/130x90" alt="Image" class="responsiv" />
+              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
             </div>
-          </div>
+            <div>
+              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
+            </div>
+            <div>
+              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
+            </div>
+          </Slider>
         </div>
-      </div>
       </div>
     </section>
     </>
