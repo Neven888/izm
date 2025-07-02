@@ -32,13 +32,13 @@ p{
 
 .slide .slajd {
   width: 100%;
-  height: auto;
+  height: 671px;
   display: block;
 }
 
 .slide .title {
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white; /* Change if needed */
@@ -50,7 +50,7 @@ p{
 
 .slide .subtitle {
   position: absolute;
-  top: 45%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white; /* Change if needed */
@@ -70,7 +70,7 @@ p{
 
 .slide .brojgumb{
 position: absolute;
-top: 50%;
+top: 65%;
 left: 50%;
 transform: translate(-50%, -50%);
 text-align: center;
@@ -85,42 +85,63 @@ padding-block: 5px;
   z-index: 10;
   width: 50px !important;
   height: 70px !important;
-  background-color: #000 !important;  /* gray background */
-  border-radius: 0 !important;        /* square corners */
+  background-color: #d59533 !important;
+  border-radius: 30px !important;       
   border: none;
   display: flex !important;
   align-items: center;
   justify-content: center;
-  opacity: 0.4 !important;
-  padding: 60 px !important;
+  opacity: 0.8 !important;
+  padding: 0px !important;
   font-size: 0;
 }
 
 .slick-prev {
-  left: 10px; /* adjust to move further over the image */
+  left: 10px !important;
 }
 
 .slick-next {
-  right: 10px; /* adjust to move further over the image */
+  right: 10px !important;
 }
 
 
 .slick-prev:before,
 .slick-next:before {
-  color: white !important;         /* white arrow icon */
-  font-size: 40px !important;
-  opacity: 1 !important;
   content: '';
+  display: block;
+  width: 40px;
+  height: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1 !important;
+  color: transparent !important; /* hide default arrows */
 }
 
 .slick-prev:before {
-  content: '⟨' !important;
+ 
+  background-image: url('./assets/img/pikl.png');
 }
 
 .slick-next:before {
-  content: '⟩' !important;
+
+  background-image: url('./assets/img/pikr.png');
 }
 
+.slide .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #021b39; /* black with 0.7 opacity */
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.slide .title,
+.slide .subtitle,
+.slide .brojgumb {
+  position: absolute;
+  z-index: 2;
+}
 
 .prvi-section img{
 	max-width: 100%;
@@ -136,9 +157,32 @@ padding-block: 5px;
 }
 
 .drugi-section{
-	background-color: #12A2DC !important;
-	padding: 60px 20px;
-	color: white;
+	position: relative;
+  padding: 60px 20px;
+  color: white;
+  overflow: hidden;
+}
+
+.drugi-section .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #021b39; /* or any color */
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.drugi-section-content {
+  position: relative;
+  z-index: 2; /* make content above overlay */
+}
+
+.button.rounded-pill.istakni {
+  opacity: 1 !important;
+  position: relative;
+  z-index: 3;
+  background-color: #d59533; /* or your color */
+  color: #021b39;
+  padding-inline: 20px;
 }
 
 .plavigumb{
