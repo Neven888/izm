@@ -4,26 +4,13 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import LatestPostsSlider from "../parts/LatestPostsSlider";
 import { Link } from "react-router-dom";
+import Edukacije from "./Edukacije";
 
 const Home = () => {
     return (
         <>
         <LatestPostsSlider />
-    <section className="prvi-section py-4">
-      <div className="container">
-        <div className="row justify-content-center">
-        <div className="col-md-8 mx-5 text-center pomagaj">
-          <img src="https://placehold.co/300x300" alt="Placeholder" />
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
-          <p>Lorem Ipsum is Simply Dummy</p>
-          <p>Lorem Ipsum is Simply Dummy Text Of The Printing Type</p>
-          <div className="button rounded-pill m-3">YOURS MORE</div>
-        </div>
-      </div>
-      </div>
-    </section>
+    <Edukacije />
 
     <section className="drugi-section py-5">
        <div className="overlay"></div>
@@ -42,7 +29,7 @@ S entuzijazmom gradimo zajednicu posvećenu znanju, kreativnosti i zajedničkim 
       </div>
       </div>
     </section>
-
+    
     <section>
       <div className="container">
         <div className="row text-center py-5">

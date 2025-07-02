@@ -9,7 +9,7 @@ import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import Home from './components/pages/Home';
 import Many from './components/pages/Many';
 import Some from './components/pages/Some';
-import Packages from './components/pages/Packages';
+import Edukacije from './components/pages/Edukacije';
 import VariousVersion from './components/pages/VariousVersion';
 import Majorit from './components/pages/Majorit';
 import BlogSingle from './components/pages/BlogSingle';
@@ -27,7 +27,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/many" element={<Many />} />
         <Route path="/some" element={<Some />} />
-        <Route path="/packages" element={<Packages />} />
+        <Route path="/edukacije" element={<Edukacije />} />
         <Route path="/variousversion" element={<VariousVersion />} />
         <Route path="/majorit" element={<Majorit />} />
         <Route path="/pivarski-blog/:slug" element={<BlogSingle />} />

@@ -18,7 +18,7 @@ const Header = () => {
                   <Link className="nav-link headtext" to="/many">O NAMA</Link> 
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link headtext" to="/packages">EDUKACIJE</Link>
+                  <Link className="nav-link headtext" to="/edukacije">EDUKACIJE</Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link headtext" to="/variousversion">PIVARSKA ZBIVANJA</Link>

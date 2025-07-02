@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Heebo:wght@100..900&display=swap');
 
-body{
+body, h5{
   font-family: "Cinzel", serif;
   font-optical-sizing: auto;
   font-weight: 300px;
@@ -86,7 +86,7 @@ padding-block: 5px;
   width: 50px !important;
   height: 70px !important;
   background-color: #d59533 !important;
-  border-radius: 30px !important;       
+  border-radius: 10px !important;       
   border: none;
   display: flex !important;
   align-items: center;
@@ -290,4 +290,58 @@ a, li{
 
 .image-wrapper:hover .image-title-hover {
   opacity: 1;
+}
+ /* Edukacija.css */
+ 
+ .edukacija-card{
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.edukacija-card h5{
+	color: #021b39;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 24px;
+}
+
+.edukacija-card .edukacija-img img{
+	width: 100%;
+	height: 120px;
+	object-fit: cover;
+}
+
+.edukacija-card .edukacija-img::after{
+	content: "";
+  display: block;
+  width: 100%;
+  height: 68px;
+	margin-top: -40px;
+	z-index: 1;
+	position: relative;
+}
+
+.edukacija-card a{
+	font-size: 14px;
+	font-weight: 600;
+	color: #021b39;
+}
+
+.edukacija-card a.edukacija-img{
+	padding: 25px 0;
+	display: block;
+}
+
+.edukacija-card .lokacija, .edukacija-card .vrijeme-i-datum, .edukacija-card .cijena{
+	color: #021b39;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.edukacija-card .lokacija {
+	margin-left: auto;
+	margin-right: auto;
 }
