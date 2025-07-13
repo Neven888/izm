@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import BlogSingle from "./BlogSingle";
 import Img from "../parts/Img.js";
 
 const Majorit = () => {
@@ -33,7 +32,7 @@ const Majorit = () => {
         <div className="container">
                 <div className="row">
                     {data.map(item => (
-                        <div className="col-md-3">
+                        <div className="col-md-3 edukacija-card">
                             <div>
                                 <Link to={'/pivarski-blog/' + item.slug}>
                                     {/*<img src={item?._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.full?.source_url} className="img-fluid mb-3 uniform-img" />*/}
@@ -42,7 +41,7 @@ const Majorit = () => {
                                         size='medium_large'
                                         alt={'Istaknuta slika za članak: ' + item.title.rendered}
                                     />
-                                    <h1>{item.title.rendered}</h1>
+                                    <h3 className="blog-title">{item.title.rendered}</h3>
                                 </Link>
                             </div>
                         </div>

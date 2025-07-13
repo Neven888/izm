@@ -39,6 +39,8 @@ const LatestPostsSlider = () => {
   };
 
   return (
+    <>
+    <h1 className="text-center mb-4">Novosti iz svijeta piva:</h1>
     <div className="slick-carousel">
       <Slider {...settings}>
         {posts.map((post) => (
@@ -53,10 +55,7 @@ const LatestPostsSlider = () => {
               className="title"
               dangerouslySetInnerHTML={{ __html: post.title.rendered }}
             />
-            <div
-              className="subtitle"
-              dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-            />
+            
             <Link
               to={`/pivarski-blog/${post.slug}`}
               className="button rounded-pill brojgumb"
@@ -67,6 +66,7 @@ const LatestPostsSlider = () => {
         ))}
       </Slider>
     </div>
+    </>
   );
 };
 

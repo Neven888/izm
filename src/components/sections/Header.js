@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
     return (
         <nav className="navbar navbar-expand-lg font-proxima-nova">
-          <div className="container py-5">
+          <div className="container py-5 pl-5">
             <a className="navbar-brand" href="/"><img src="img/piklogo.png" alt="PIK logo" style={{ maxWidth: "130px" }} /></a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -27,10 +27,10 @@ const Header = () => {
                   <Link className="nav-link headtext" to="/majorit">PIVARSKI BLOG</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link headtext" to="/combine">KONTAKT</Link>
+                  <Link className="nav-link headtext" to="/kontakt">KONTAKT</Link>
                 </li>
                 <li className="nav-item rounded-pill">
-                  <Link className="nav-link" to="/commodus">UČLANI SE</Link>
+                  <Link className="nav-link" to="/prijava-za-clanstvo">UČLANI SE</Link>
                 </li>
               </ul>
             </div>

@@ -21,10 +21,10 @@ const Home = () => {
           <p>Udruga pivara Istre i Kvarnera osnovana je s ciljem okupljanja ljubitelja pivarstva i razmjene znanja i vještina u proizvodnji piva. 
 Naša misija je promovirati pivarstvo kao hobi, poticati zajednička druženja te unaprjeđivati vještine i iskustva putem povratnih informacija kroz kušanja. Organiziranjem edukativnih predavanja, seminara, tečajeva, radionica i manifestacija, Udruga aktivno doprinosi razvoju pivarske kulture i jača društvene veze sa srodnim organizacijama. 
 S entuzijazmom gradimo zajednicu posvećenu znanju, kreativnosti i zajedničkim iskustvima u svijetu pivarstva.</p>
-          <Link className="button rounded-pill istakni" to="https://docs.google.com/forms/d/e/1FAIpQLSegyVPnlsW4zHwHLKPo2iRKhEyxnPIZHB6s35kb1xb43EoB0Q/viewform" target="_blank">POSTANI ČLAN</Link>
+          <Link className="button rounded-pill istakni" to="/prijava-za-clanstvo">POSTANI ČLAN</Link>
         </div>
         <div className="col-6 text-center">
-          <img src="img/piklogo.png" className="img-fluid" />
+          <img src="img/pikcrew.jpeg" className="img-fluid pikclanovi" alt="PIK članovi" />
         </div>
       </div>
       </div>
@@ -33,7 +33,7 @@ S entuzijazmom gradimo zajednicu posvećenu znanju, kreativnosti i zajedničkim 
     <section>
       <div className="container">
         <div className="row text-center py-5">
-          <h1 className="pb-4 mb-4">GALERIJA</h1>
+          <h1 className="pb-4 mb-4">SPONZORI I PARNERI:</h1>
           <Slider {...{dots: true, arrows: false, infinite: true, speed: 500, slidesToShow: 5, slidesToScroll: 5, initialSlide: 0,
     responsive: [
       {

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Heebo:wght@100..900&display=swap');
 
-body, h5{
+body, h5, h1, h3{
   font-family: "Cinzel", serif;
   font-optical-sizing: auto;
   font-weight: 300px;
@@ -30,10 +30,16 @@ p{
   position: relative;
 }
 
-.slide .slajd {
+.slide {
   width: 100%;
   height: 671px;
   display: block;
+}
+
+.slajd {
+  height: 671px;
+  display: block;
+  background-size: cover;
 }
 
 .slide .title {
@@ -244,8 +250,8 @@ a, li{
 }
 
 .slick-dots li.slick-active{
-  background-color: #12A2DC;
-  border: 1px solid #12A2DC;
+  background-color: #021b39;
+  border: 1px solid #021b39;
 }
 
 .responsive{
@@ -298,7 +304,7 @@ a, li{
 	border-radius: 10px;
 	padding: 20px;
 	margin-bottom: 20px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 4px 12px rgba(2,27,57, 0.3);
 }
 
 .edukacija-card h5{
@@ -344,4 +350,13 @@ a, li{
 .edukacija-card .lokacija {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.kontaktslika {
+	border-radius: 80px;
+}
+
+.pikclanovi {
+	border-radius: 80px;
+  margin-left: 140px;
 }

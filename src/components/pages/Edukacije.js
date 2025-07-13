@@ -70,7 +70,7 @@ const Edukacije = () => {
             <div className="cijena">{getTermNameByTaxonomy(edukacija._embedded?.["wp:term"], "cijena")}€</div>
           </div>
           <div className="prijava-button text-center">
-			<a href="#" className="btn rounded-pill">Prijavi se</a>
+			<a href="/edukacije/skolica-kuhanja-piva" target="_blank" className="btn rounded-pill">Prijavi se</a>
 		</div>
 		</div>
 	</div>

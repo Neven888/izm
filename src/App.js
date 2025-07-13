@@ -2,7 +2,6 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './App.css';
-import Slider from 'react-slick';
 import Footer from './components/sections/Footer';
 import Header from './components/sections/Header';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
@@ -16,7 +15,9 @@ import BlogSingle from './components/pages/BlogSingle';
 import Error from './components/parts/Error';
 import Login from './components/pages/Login';
 import Register from './components/pages/Register';
-import CommodUs from './components/pages/CommodUs';
+import UclaniSe from './components/pages/UclaniSe';
+import KuhanjeSingle from './components/pages/KuhanjeSingle';
+import Kontakt from './components/pages/Kontakt';
 
 function App() {
   return (
@@ -34,7 +35,9 @@ function App() {
         <Route path="*" element={<Error />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/commodus" element={<CommodUs />} />
+        <Route path="/prijava-za-clanstvo" element={<UclaniSe />} />
+        <Route path="/edukacije/skolica-kuhanja-piva" element={<KuhanjeSingle />} />
+        <Route path="/kontakt" element={<Kontakt />} />
       </Routes>
       <Footer />
     </div>
