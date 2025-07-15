@@ -45,10 +45,10 @@ a {
   background-color: #d59533;
   border: 4px solid #021b39;
   border-radius: 150px;
-  margin: 40px auto; /* centers the pill */
+  margin: 40px auto;
   padding: 30px 80px;
  
-  box-shadow: 0 4px 12px rgba(2, 27, 57, 0.2); /* optional: subtle depth */
+  box-shadow: 0 4px 12px rgba(2, 27, 57, 0.2);
 }
 
 .rounded-pill{
@@ -71,11 +71,17 @@ a {
   height: 100%;
   text-decoration: none;
   color: #d59533;
-  font-size: 18px;
+  
   font-weight: 700;
   transition: transform 0.3s ease;
   z-index: 2;
   position: relative;
+  font-size: clamp(8px, 1.5vw, 18px);
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .spade-pill {
@@ -91,14 +97,14 @@ a {
   width: 40px;
   height: 40px;
  
-  color: #d59533; /* Use currentColor in SVG for this to apply */
+  color: #d59533;
 }
 
 @media (max-width: 991.98px) {
   .pill-navbar {
     flex-direction: column;
     align-items: stretch;
-    border-radius: 200px; /* manje za manji ekran */
+    border-radius: 200px;
     padding: 10px;
   }
 
@@ -130,12 +136,25 @@ a {
     align-self: center;
     margin-top: 15px;
   }
+
+  .avatar-dropdown-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px; /* razmak od spadea */
+    margin-bottom: 10px;
+  }
+
+  .avatar-dropdown-wrapper > * {
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 1000px) and (max-width: 1400px) {
   .navbar-nav .nav-link {
-    font-size: 14px; /* manji tekst */
-    padding: 6px 10px; /* manji padding */
+    font-size: 14px;
+    padding: 6px 10px;
   }
 
   .pill-navbar {
@@ -146,7 +165,22 @@ a {
   .navbar-nav {
     gap: 10px; 
     flex-wrap: wrap;
-    justify-content: center;/* smanji razmak među linkovima */
+    justify-content: center;
+  }
+
+  .spade-pill {
+    max-width: 100px;
+    max-height: 100px;
+    flex-shrink: 1;
+  }
+
+  .spade-text {
+    display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+    
   }
 }
 
@@ -170,11 +204,11 @@ a {
   height: 100%;
   color: #021b39;
   z-index: 1;
-  pointer-events: none; /* allow clicks/text interaction */
+  pointer-events: none;
 }
 
 .spade-pill .nav-link {
-  color: #d59533 !important; /* text color */
+  color: #d59533 !important;
   z-index: 1;
   position: relative;
 }
@@ -184,24 +218,29 @@ a {
   z-index: 2;
   color: #d59533;
   margin-top: 5px;
-  font-size: 18px;
+  font-size: clamp(8px, 1.18vw, 18px);
   font-weight: 700;
   text-align: center;
+   display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .navbar-nav {
   display: flex;
-  align-items: center;  /* vertically center all nav items */
-  height: 120px;        /* same height */
-  gap: 15px;            /* spacing between links */
+  align-items: center;
+  height: 120px;
+  gap: 15px;
 }
 
 .navbar-nav .nav-link {
-  font-size: 18px; /* Increase this value as needed */
+  font-size: 18px;
   font-weight: 600;
   padding: 10px 15px;
   text-transform: uppercase;
-  white-space: nowrap; /* optional: makes links all caps */
+  white-space: nowrap;
 }
 
 .slick-carousel {
@@ -211,22 +250,21 @@ a {
 }
 
 .slide {
-  position: relative;
-}
-
-.slide {
-   position: relative;
-  display: flex;          /* Make the content inside flex */
-  justify-content: center; /* Center horizontally */
-  align-items: center;     /* Optional: center vertically */
+position: relative;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
   height: 671px;
+  padding: 0 20px; /* malo prostora sa strana ako treba */
+  overflow: hidden;
 }
 
 .slajd {
-  height: 671px;
-  max-width: 100%;
-  object-fit: cover;
-  display: block;
+ max-width: 100%;
+  max-height: 671px;
+  object-fit: contain;
+  margin: 0 auto; /* centrira inline element */
+  display: block; 
 }
 
 .slide .title {
@@ -234,7 +272,7 @@ a {
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white; /* Change if needed */
+  color: white;
   font-size: 60px;
   padding: 10px 20px;
   border-radius: 5px;
@@ -246,7 +284,7 @@ a {
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white; /* Change if needed */
+  color: white;
   font-size: 15px;
   padding: 10px 10px;
   border-radius: 5px;
@@ -321,26 +359,26 @@ padding-block: 5px;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 1 !important;
-  color: transparent !important; /* hide default arrows */
+  color: transparent !important;
 }
 
 .slick-prev:before {
  
   background-image: url('./assets/img/spade.svg');
-  transform: rotate(270deg); /* flip the arrow */
-  color:#d59533;  /* make sure the arrow is visible */
+  transform: rotate(270deg);
+  color:#d59533;
 }
 
 .slick-next:before {
 
   background-image: url('./assets/img/spade.svg');
-  transform: rotate(90deg); /* flip the arrow */
+  transform: rotate(90deg);
 }
 
 .slide .overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #021b39; /* black with 0.7 opacity */
+  background-color: #021b39;
   opacity: 0.7;
   z-index: 1;
 }
@@ -379,21 +417,21 @@ padding-block: 5px;
 .drugi-section .overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #021b39; /* or any color */
+  background-color: #021b39;
   opacity: 0.8;
   z-index: 1;
 }
 
 .drugi-section-content {
   position: relative;
-  z-index: 2; /* make content above overlay */
+  z-index: 2;
 }
 
 .button.rounded-pill.istakni {
   opacity: 1 !important;
   position: relative;
   z-index: 3;
-  background-color: #d59533; /* or your color */
+  background-color: #d59533;
   color: #021b39;
   padding-inline: 20px;
 }

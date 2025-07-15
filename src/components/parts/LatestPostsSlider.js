@@ -44,12 +44,17 @@ const LatestPostsSlider = () => {
     <div className="slick-carousel prvi-section">
       <Slider {...settings}>
         {posts.map((post) => (
-          <div className="slide" key={post.id}>
-            <img
-              src={post._embedded["wp:featuredmedia"]?.[0]?.source_url}
-              alt={post.title.rendered}
-              className="slajd"
-            />
+          <div
+    className="slide"
+    key={post.id}
+    style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+  >
+    <img
+      src={post._embedded["wp:featuredmedia"]?.[0]?.source_url}
+      alt={post.title.rendered}
+      className="slajd"
+      style={{ maxWidth: "100%", maxHeight: "671px", objectFit: "contain" }}
+    />
             <div className="overlay"></div>
             <div
               className="title"

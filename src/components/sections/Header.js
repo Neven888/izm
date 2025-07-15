@@ -68,7 +68,7 @@ const Header = () => {
                     <span className="spade-text">UČLANI SE</span>
                   </Link>
                 </li>
-                <div className="d-flex align-items-center">
+                <div className="d-flex align-items-center avatar-dropdown-wrapper">
                   <AvatarDropdown />
                 </div>
               </ul>

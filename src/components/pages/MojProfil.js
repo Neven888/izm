@@ -38,7 +38,7 @@ const MojProfil = () => {
   return (
     <div className="container mt-4">
       <h2>Hej {user ? user.name : ""}</h2>
-        <p>Broj članstva za login na <a href="https://www.mr-malt.com/members">Mr.Malt</a>: {user ? user.membershipNumber : "021"}</p>
+        <p>Broj članstva za login na <a href="https://www.mr-malt.com/members">Mr.Malt</a>: {user ? user.membershipNumber : ""}023</p>
 
       <div className="poll mt-5 p-4 border rounded" style={{ maxWidth: 600 }}>
         <h4>Idući stil za PIK ligu...</h4>
