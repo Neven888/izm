@@ -5,26 +5,27 @@ import Slider from "react-slick";
 import LatestPostsSlider from "../parts/LatestPostsSlider";
 import { Link } from "react-router-dom";
 import Edukacije from "./Edukacije";
+import Sponzori from "../parts/Sponzori";
 
 const Home = () => {
     return (
         <>
         <LatestPostsSlider />
-    <Edukacije />
+        <Edukacije />
 
     <section className="drugi-section py-5">
        <div className="overlay"></div>
       <div className="container drugi-section-content">
         <div className="row">
-        <div className="col-6">
+        <div className="col-12 col-md-6 mb-4">
           <h1>O NAMA</h1>
           <p>Udruga pivara Istre i Kvarnera osnovana je s ciljem okupljanja ljubitelja pivarstva i razmjene znanja i vještina u proizvodnji piva. 
-Naša misija je promovirati pivarstvo kao hobi, poticati zajednička druženja te unaprjeđivati vještine i iskustva putem povratnih informacija kroz kušanja. Organiziranjem edukativnih predavanja, seminara, tečajeva, radionica i manifestacija, Udruga aktivno doprinosi razvoju pivarske kulture i jača društvene veze sa srodnim organizacijama. 
-S entuzijazmom gradimo zajednicu posvećenu znanju, kreativnosti i zajedničkim iskustvima u svijetu pivarstva.</p>
+              Naša misija je promovirati pivarstvo kao hobi, poticati zajednička druženja te unaprjeđivati vještine i iskustva putem povratnih informacija kroz kušanja. Organiziranjem edukativnih predavanja, seminara, tečajeva, radionica i manifestacija, Udruga aktivno doprinosi razvoju pivarske kulture i jača društvene veze sa srodnim organizacijama. 
+              S entuzijazmom gradimo zajednicu posvećenu znanju, kreativnosti i zajedničkim iskustvima u svijetu pivarstva.</p>
           <Link className="button rounded-pill istakni" to="/prijava-za-clanstvo">POSTANI ČLAN</Link>
         </div>
-        <div className="col-6 text-center">
-          <img src="img/pikcrew.jpeg" className="img-fluid pikclanovi" alt="PIK članovi" />
+        <div className="col-12 col-md-6 text-center">
+          <img src="img/pikcrew.jpeg" className="img-fluid pikclanovi center-img" alt="PIK članovi" />
         </div>
       </div>
       </div>
@@ -34,82 +35,7 @@ S entuzijazmom gradimo zajednicu posvećenu znanju, kreativnosti i zajedničkim 
       <div className="container">
         <div className="row text-center py-5">
           <h1 className="pb-4 mb-4">SPONZORI I PARNERI:</h1>
-          <Slider {...{dots: true, arrows: false, infinite: true, speed: 500, slidesToShow: 5, slidesToScroll: 5, initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]}} className="responsiv">
-            <div>
-              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
-            </div>
-            <div>
-              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
-            </div>
-            <div>
-              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
-            </div>
-            <div>
-              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
-            </div>
-            <div>
-              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
-            </div>
-            <div>
-              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
-            </div>
-            <div>
-              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
-            </div>
-            <div>
-              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
-            </div>
-            <div>
-              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
-            </div>
-            <div>
-              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
-            </div>
-            <div>
-              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
-            </div>
-            <div>
-              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
-            </div>
-            <div>
-              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
-            </div>
-            <div>
-              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
-            </div>
-            <div>
-              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
-            </div>
-            <div>
-              <img src="https://placehold.co/130x90" alt="Image" className="responsiv" />
-            </div>
-          </Slider>
+          <Sponzori />
         </div>
       </div>
     </section>

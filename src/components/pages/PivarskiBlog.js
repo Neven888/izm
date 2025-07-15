@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Img from "../parts/Img.js";
+import Loading from "../parts/Loading.js";
 
-const Majorit = () => {
+const PivarskiBlog = () => {
 
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
@@ -25,14 +26,13 @@ const Majorit = () => {
     }, []);
 
     if (error) return <p>Greška: {error}</p>;
-    if (!data) return <p>Učitavanje...</p>;
-
+    if (!data) return <Loading />;
 
     return(
-        <div className="container">
+        <div className="container mt-5">
                 <div className="row">
                     {data.map(item => (
-                        <div className="col-md-3 edukacija-card">
+                        <div className="col-md-3 edukacija-card mx-5 my-4" key={item.id}>
                             <div>
                                 <Link to={'/pivarski-blog/' + item.slug}>
                                     {/*<img src={item?._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.full?.source_url} className="img-fluid mb-3 uniform-img" />*/}
@@ -41,7 +41,7 @@ const Majorit = () => {
                                         size='medium_large'
                                         alt={'Istaknuta slika za članak: ' + item.title.rendered}
                                     />
-                                    <h3 className="blog-title">{item.title.rendered}</h3>
+                                    <h3 className="blog-title my-3">{item.title.rendered}</h3>
                                 </Link>
                             </div>
                         </div>
@@ -51,4 +51,4 @@ const Majorit = () => {
     );
 };
 
-export default Majorit;
+export default PivarskiBlog;

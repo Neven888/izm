@@ -1,23 +1,199 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Heebo:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Architects+Daughter&family=Julius+Sans+One&family=Raleway&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
 
 body, h5, h1, h3{
-  font-family: "Cinzel", serif;
-  font-optical-sizing: auto;
-  font-weight: 300px;
+  font-family: "Architects Daughter", cursive;
+  font-weight: 400;
   font-style: normal;
 }
 
-p{
-	font-family: "Roboto", sans-serif;
+p, li{
+	font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
+  font-weight: 1000;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
 
+}
+
+a {
+  text-decoration: none;
+  color: #021b39;
+}
+
+.pill-navbar {
+  background-color: #d59533;
+  border: 4px solid #021b39;
+  border-radius: 150px;
+  margin: 20px auto; /* centers the pill */
+  padding: 5px 40px;
+ 
+  box-shadow: 0 4px 12px rgba(2, 27, 57, 0.2); /* optional: subtle depth */
 }
 
 .rounded-pill{
 	background: #d59533;
 	color: #021b39;
+}
+
+.plavi.rounded-pill .nav-link{
+  background: #021b39;
+  color: #d59533 !important;
+}
+
+.spade-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #d59533;
+  font-size: 18px;
+  font-weight: 700;
+  transition: transform 0.3s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.spade-pill {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.spade-icon {
+  width: 40px;
+  height: 40px;
+ 
+  color: #d59533; /* Use currentColor in SVG for this to apply */
+}
+
+@media (max-width: 991.98px) {
+  .pill-navbar {
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 200px; /* manje za manji ekran */
+    padding: 10px;
+  }
+
+  .pill-navbar .navbar-collapse {
+    background-color: #d59533;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .pill-navbar .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    gap: 10px;
+  }
+
+  .pill-navbar .nav-item {
+    width: 100%;
+  }
+
+  .pill-navbar .nav-link {
+    width: 100%;
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  .pill-navbar .spade-pill {
+    align-self: center;
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+  .navbar-nav .nav-link {
+    font-size: 14px; /* manji tekst */
+    padding: 6px 10px; /* manji padding */
+  }
+
+  .pill-navbar {
+    padding-bottom: 60px; /* dodatni prostor ispod linkova */
+  }
+  
+  .navbar-nav {
+    gap: 10px; 
+    flex-wrap: wrap;
+    justify-content: center;/* smanji razmak među linkovima */
+  }
+}
+
+.spade-link:hover {
+  transform: scale(1.15);
+}
+
+.nav-item:hover {
+  transform: scale(1.2);
+}
+
+.nav-item {
+   transition: transform 0.3s ease;
+}
+
+.spade-pill svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #021b39;
+  z-index: 1;
+  pointer-events: none; /* allow clicks/text interaction */
+}
+
+.spade-pill .nav-link {
+  color: #d59533 !important; /* text color */
+  z-index: 1;
+  position: relative;
+}
+
+.spade-text {
+  position: relative;
+  z-index: 2;
+  color: #d59533;
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;  /* vertically center all nav items */
+  height: 120px;        /* same height */
+  gap: 15px;            /* spacing between links */
+}
+
+.navbar-nav .nav-link {
+  font-size: 18px; /* Increase this value as needed */
+  font-weight: 600;
+  padding: 10px 15px;
+  text-transform: uppercase; /* optional: makes links all caps */
 }
 
 .slick-carousel {
@@ -31,15 +207,18 @@ p{
 }
 
 .slide {
-  width: 100%;
+   position: relative;
+  display: flex;          /* Make the content inside flex */
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Optional: center vertically */
   height: 671px;
-  display: block;
 }
 
 .slajd {
   height: 671px;
+  max-width: 100%;
+  object-fit: cover;
   display: block;
-  background-size: cover;
 }
 
 .slide .title {
@@ -67,11 +246,10 @@ p{
 }
 
 .subtitle{
-	font-family: "Roboto", sans-serif;
+	font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
+  font-weight: 1000;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
 }
 
 .slide .brojgumb{
@@ -82,6 +260,20 @@ transform: translate(-50%, -50%);
 text-align: center;
 padding-inline: 20px;
 padding-block: 5px;
+}
+
+.brojgumb {
+  background-color: #d59533;
+  color: #021b39;
+  border: 2px solid #d59533;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.brojgumb:hover {
+  background-color: white;
+  color: #021b39;
 }
 
 .slick-prev,
@@ -126,12 +318,15 @@ padding-block: 5px;
 
 .slick-prev:before {
  
-  background-image: url('./assets/img/pikl.png');
+  background-image: url('./assets/img/spade.svg');
+  transform: rotate(270deg); /* flip the arrow */
+  color:#d59533;  /* make sure the arrow is visible */
 }
 
 .slick-next:before {
 
-  background-image: url('./assets/img/pikr.png');
+  background-image: url('./assets/img/spade.svg');
+  transform: rotate(90deg); /* flip the arrow */
 }
 
 .slide .overlay {
@@ -191,29 +386,18 @@ padding-block: 5px;
   padding-inline: 20px;
 }
 
-.plavigumb{
-	background: white;
-	color: #12A2DC;
-	padding-inline: 17px !important;
-	padding-block: 5px;
-}
-
-a, li{
-	font-family: "Roboto", sans-serif;
+a, li, strong{
+	font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
+  font-weight: 1100;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-	color: black;
-	text-decoration: none;
 }
 
 .button{
-	font-family: "Roboto", sans-serif;
+	font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
+  font-weight: 1000;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
 }
 
 .footer{
@@ -225,10 +409,6 @@ a, li{
 	color: #021b39 !important;
 }
 
-.pomagaj{
-	max-width: 800px;
-	justify-content: center;
-}
 
 .slick-dots li{
   color: transparent;
@@ -307,16 +487,32 @@ a, li{
 	box-shadow: 0 4px 12px rgba(2,27,57, 0.3);
 }
 
+.event-card{
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 4px 12px rgba(2,27,57, 0.3);
+}
+
 .edukacija-card h5{
 	color: #021b39;
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: 600;
 	line-height: 24px;
 }
 
+.event-card h5{
+	color: #021b39;
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 24px;
+  text-decoration: none;
+}
+
 .edukacija-card .edukacija-img img{
 	width: 100%;
-	height: 120px;
+	height: 230px;
 	object-fit: cover;
 }
 
@@ -331,8 +527,8 @@ a, li{
 }
 
 .edukacija-card a{
-	font-size: 14px;
-	font-weight: 600;
+	font-size: 18px;
+	font-weight: 400;
 	color: #021b39;
 }
 
@@ -344,7 +540,7 @@ a, li{
 .edukacija-card .lokacija, .edukacija-card .vrijeme-i-datum, .edukacija-card .cijena{
 	color: #021b39;
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 18px;
 }
 
 .edukacija-card .lokacija {
@@ -359,4 +555,18 @@ a, li{
 .pikclanovi {
 	border-radius: 80px;
   margin-left: 140px;
+}
+
+@media (max-width: 768px) {
+  .pikclanovi {
+    margin-top: 20px;
+  }
+}
+
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
 }

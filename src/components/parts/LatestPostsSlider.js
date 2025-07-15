@@ -40,8 +40,8 @@ const LatestPostsSlider = () => {
 
   return (
     <>
-    <h1 className="text-center mb-4">Novosti iz svijeta piva:</h1>
-    <div className="slick-carousel">
+    
+    <div className="slick-carousel prvi-section mt-5">
       <Slider {...settings}>
         {posts.map((post) => (
           <div className="slide" key={post.id}>

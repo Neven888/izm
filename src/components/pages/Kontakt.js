@@ -31,9 +31,9 @@ const Kontakt = () => {
 
   return (
     <div className="container py-5">
-      <h2 className='pb-5'>Kontaktirajte nas</h2>
+      <h2 className='pb-5'>Imate pitanja? Kontaktirajte nas!</h2>
       <div className='row justify-content-center mb-3'>
-        <div className='col-md-6'>
+        <div className='col-md-6 mb-5'>
       <form ref={form} onSubmit={sendEmail}>
         <div className="col-md-6 mb-3">
           <label>Ime i prezime:</label>
@@ -51,7 +51,7 @@ const Kontakt = () => {
         {status && <p className="mt-3">{status}</p>}
       </form>
       </div>
-      <div className="col-md-6">
+      <div className="col-md-6 text-center">
             <img src="/img/kontakt2.png" alt="Kontakt" className="img-fluid kontaktslika" />
         </div>
       </div>

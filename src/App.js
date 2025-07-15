@@ -1,16 +1,17 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './App.css';
 import Footer from './components/sections/Footer';
 import Header from './components/sections/Header';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import Home from './components/pages/Home';
-import Many from './components/pages/Many';
+import ONama from './components/pages/ONama';
 import Some from './components/pages/Some';
 import Edukacije from './components/pages/Edukacije';
-import VariousVersion from './components/pages/VariousVersion';
-import Majorit from './components/pages/Majorit';
+import Eventi from './components/pages/Eventi';
+import PivarskiBlog from './components/pages/PivarskiBlog';
 import BlogSingle from './components/pages/BlogSingle';
 import Error from './components/parts/Error';
 import Login from './components/pages/Login';
@@ -24,13 +25,14 @@ function App() {
     <Router>
     <div className="App">
       <Header />
+      <main>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/many" element={<Many />} />
+        <Route path="/o-nama" element={<ONama />} />
         <Route path="/some" element={<Some />} />
         <Route path="/edukacije" element={<Edukacije />} />
-        <Route path="/variousversion" element={<VariousVersion />} />
-        <Route path="/majorit" element={<Majorit />} />
+        <Route path="/pivarska-zbivanja" element={<Eventi />} />
+        <Route path="/pivarski-blog" element={<PivarskiBlog />} />
         <Route path="/pivarski-blog/:slug" element={<BlogSingle />} />
         <Route path="*" element={<Error />} />
         <Route path="/login" element={<Login />} />
@@ -39,6 +41,7 @@ function App() {
         <Route path="/edukacije/skolica-kuhanja-piva" element={<KuhanjeSingle />} />
         <Route path="/kontakt" element={<Kontakt />} />
       </Routes>
+      </main>
       <Footer />
     </div>
     </Router>

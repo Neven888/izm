@@ -1,0 +1,29 @@
+.slider-container {
+  padding: 20px 0;
+}
+
+.sponzori-slider .slick-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor-slide {
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor-logo {
+  max-height: 90px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .sponsor-slide {
+    padding: 0 5px;
+  }
+}

@@ -50,9 +50,9 @@ const Edukacije = () => {
                     <div className="col-md-6 col-lg-3">
 				<div className="edukacija-card">
 					<div className="d-flex justify-content-between align-items-center">
-						<a href="#"><h5>{edukacija.title.rendered}</h5></a>
+						<a href="/edukacije/skolica-kuhanja-piva"><h5>{edukacija.title.rendered}</h5></a>
 					</div>
-					<a href="#" className="edukacija-img">
+					<a href="/edukacije/skolica-kuhanja-piva" className="edukacija-img">
                         <img src={edukacija._embedded?.["wp:featuredmedia"]?.[0].media_details?.sizes?.medium?.source_url} />   
                         </a>
 					 <div className="mb-2">
