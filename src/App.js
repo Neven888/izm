@@ -20,7 +20,7 @@ import UclaniSe from './components/pages/UclaniSe';
 import KuhanjeSingle from './components/pages/KuhanjeSingle';
 import Kontakt from './components/pages/Kontakt';
 import PIKliga from './components/pages/PIKliga';
-
+import MojProfil from './components/pages/MojProfil';
 function App() {
   return (
     <Router>
@@ -42,6 +42,7 @@ function App() {
         <Route path="/edukacije/skolica-kuhanja-piva" element={<KuhanjeSingle />} />
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="/pik-liga" element={<PIKliga />} />
+        <Route path="/moj-profil" element={<MojProfil />} />
       </Routes>
       </main>
       <Footer />
