@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import AvatarDropdown from "../parts/AvatarDropdown";
 
 const Header = () => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    // Dohvati user iz localStorage kad se komponenta mounta
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
+
+  const handleLogin = () => {
+    // Simuliraj login
+    const fakeUser = { name: "Marko", email: "marko@example.com" };
+    localStorage.setItem("user", JSON.stringify(fakeUser));
+    setUser(fakeUser);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    setUser(null);
+  };
+
+
     return (
         <nav className="navbar navbar-expand-lg pill-navbar">
-          <div className="container d-flex flex-column flex-lg-row justify-content-between align-items-center py-5 px-3 px-md-5">
+          <div className="container-fluid d-flex flex-column flex-lg-row justify-content-between align-items-center py-5 px-3 px-md-5">
             <a className="navbar-brand mx-auto mx-lg-0" href="/"><img src="img/piklogo.png" alt="PIK logo" style={{ maxWidth: "130px" }} /></a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -44,6 +68,9 @@ const Header = () => {
                     <span className="spade-text">UČLANI SE</span>
                   </Link>
                 </li>
+                <div className="d-flex align-items-center">
+                  <AvatarDropdown />
+                </div>
               </ul>
             </div>
           </div>

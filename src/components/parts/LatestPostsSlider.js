@@ -41,7 +41,7 @@ const LatestPostsSlider = () => {
   return (
     <>
     
-    <div className="slick-carousel prvi-section mt-5">
+    <div className="slick-carousel prvi-section">
       <Slider {...settings}>
         {posts.map((post) => (
           <div className="slide" key={post.id}>

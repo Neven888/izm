@@ -19,6 +19,7 @@ import Register from './components/pages/Register';
 import UclaniSe from './components/pages/UclaniSe';
 import KuhanjeSingle from './components/pages/KuhanjeSingle';
 import Kontakt from './components/pages/Kontakt';
+import PIKliga from './components/pages/PIKliga';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path="/prijava-za-clanstvo" element={<UclaniSe />} />
         <Route path="/edukacije/skolica-kuhanja-piva" element={<KuhanjeSingle />} />
         <Route path="/kontakt" element={<Kontakt />} />
+        <Route path="/pik-liga" element={<PIKliga />} />
       </Routes>
       </main>
       <Footer />

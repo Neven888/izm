@@ -1,0 +1,98 @@
+.avatar-dropdown-menu {
+  position: absolute;
+  right: -60px; /* poravnanje s desne strane avatara */
+  top: 100%;
+  background-color: white;
+  border: 1px solid #021b39;
+  z-index: 10;
+  min-width: 200px;
+  white-space: nowrap;
+
+}
+
+span.avatar-dropdown-text {
+  color: #021b39;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+}
+
+span {
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    color: #021b39;
+    text-decoration: none;
+}
+
+.avatar-dropdown {
+  margin-left: 20px;
+}
+
+.avatar-circle {
+  width: 45px;
+  height: 45px;
+  background-color: #021b39;
+  color: #d59533;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.avatar-circle:hover {
+  transform: scale(1.1);
+}
+
+.dropdown-menu-custom {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  background-color: white;
+  border: 2px solid #021b39;
+  border-radius: 10px;
+  padding: 15px;
+  width: 200px;
+  box-shadow: 0 4px 12px rgba(2, 27, 57, 0.3);
+  z-index: 1000;
+}
+
+.dropdown-user-name {
+  font-weight: 700;
+  color: #021b39;
+  margin-bottom: 5px;
+}
+
+.dropdown-user-email {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.dropdown-link {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  color: #021b39;
+  text-align: left;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dropdown-link:hover {
+  color: #d59533;
+}
+
+.logout-button {
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}

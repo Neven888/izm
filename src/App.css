@@ -22,6 +22,12 @@ body, h5, h1, h3{
   font-style: normal;
 }
 
+.dropdown-user-name {
+ font-family: "Architects Daughter", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 p, li{
 	font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
@@ -39,8 +45,8 @@ a {
   background-color: #d59533;
   border: 4px solid #021b39;
   border-radius: 150px;
-  margin: 20px auto; /* centers the pill */
-  padding: 5px 40px;
+  margin: 40px auto; /* centers the pill */
+  padding: 30px 80px;
  
   box-shadow: 0 4px 12px rgba(2, 27, 57, 0.2); /* optional: subtle depth */
 }
@@ -133,9 +139,10 @@ a {
   }
 
   .pill-navbar {
-    padding-bottom: 60px; /* dodatni prostor ispod linkova */
+    padding-bottom: 60px;
+    width: clamp(900px, 90vw, 1400px);
   }
-  
+
   .navbar-nav {
     gap: 10px; 
     flex-wrap: wrap;
@@ -193,7 +200,8 @@ a {
   font-size: 18px; /* Increase this value as needed */
   font-weight: 600;
   padding: 10px 15px;
-  text-transform: uppercase; /* optional: makes links all caps */
+  text-transform: uppercase;
+  white-space: nowrap; /* optional: makes links all caps */
 }
 
 .slick-carousel {
@@ -342,6 +350,10 @@ padding-block: 5px;
 .slide .brojgumb {
   position: absolute;
   z-index: 2;
+}
+
+.prvi-section {
+  margin-top: 80px;
 }
 
 .prvi-section img{
