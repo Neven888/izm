@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Error from "../parts/Error";
 import Loading from "../parts/Loading";
+import { Link } from "react-router-dom";
 const Edukacije = () => {
 
     const [edukacije, setEdukacije] = useState(null);
@@ -50,11 +51,11 @@ const Edukacije = () => {
                     <div className="col-md-6 col-lg-3">
 				<div className="edukacija-card">
 					<div className="d-flex justify-content-between align-items-center">
-						<a href="/edukacije/skolica-kuhanja-piva"><h5>{edukacija.title.rendered}</h5></a>
+						<Link to="/edukacije/prijava"><h5>{edukacija.title.rendered}</h5></Link>
 					</div>
-					<a href="/edukacije/skolica-kuhanja-piva" className="edukacija-img">
+					<Link to="/edukacije/prijava" className="edukacija-img">
                         <img src={edukacija._embedded?.["wp:featuredmedia"]?.[0].media_details?.sizes?.medium?.source_url} />   
-                        </a>
+                        </Link>
 					 <div className="mb-2">
             <strong>Lokacija:</strong>
             <div className="lokacija">{getTermNameByTaxonomy(edukacija._embedded?.["wp:term"], "lokacija")}</div>
@@ -70,7 +71,7 @@ const Edukacije = () => {
             <div className="cijena">{getTermNameByTaxonomy(edukacija._embedded?.["wp:term"], "cijena")}€</div>
           </div>
           <div className="prijava-button text-center">
-			<a href="/edukacije/skolica-kuhanja-piva" target="_blank" className="btn rounded-pill">Prijavi se</a>
+			<Link to="/edukacije/prijava" className="btn rounded-pill">Prijavi se</Link>
 		</div>
 		</div>
 	</div>

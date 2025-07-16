@@ -5,6 +5,7 @@ const KuhanjeSingle = () => {
     name: "",
     surname: "",
     email: "",
+    vrsta_edukacije: "",
   });
 
   const [status, setStatus] = useState("");
@@ -21,7 +22,7 @@ const KuhanjeSingle = () => {
     e.preventDefault();
     setStatus("Šaljem prijavu...");
 
-    const values = [[formData.name, formData.surname, formData.email]];
+    const values = [[formData.name, formData.surname, formData.email, formData.vrsta_edukacije]];
 
     const requestOptions = {
       method: "POST",
@@ -38,7 +39,7 @@ const KuhanjeSingle = () => {
       const result = await response.text();
       console.log(result);
       setStatus("Prijava uspješna! Vidimo se na školici kuhanja piva!");
-      setFormData({ name: "", surname: "", email: "" });
+      setFormData({ name: "", surname: "", email: "", vrsta_edukacije: "" });
     } catch (error) {
       console.error("Error:", error);
       setStatus("Pokušaj ponovno. Došlo je do greške.");
@@ -47,7 +48,7 @@ const KuhanjeSingle = () => {
 
   return (
     <div className="container my-4 justify-content-center">
-      <h2>Prijava u školicu kuhanja piva:</h2>
+      <h2>Prijava na edukaciju:</h2>
       <form onSubmit={handleSubmit}>
         <div className="col-md-3 mb-3">
           <label>Ime:</label>
@@ -81,6 +82,20 @@ const KuhanjeSingle = () => {
             onChange={handleChange}
             required
           />
+        </div>
+         <div className="col-md-3 mb-3">
+          <label>Vrsta edukacije:</label>
+           <select
+        name="vrsta_edukacije"
+        className="form-control"
+        value={formData.vrsta_edukacije}
+        onChange={handleChange}
+        required
+      >
+        <option value="">-- Odaberite --</option>
+        <option value="Škola kuhanja piva">Škola kuhanja piva</option>
+        <option value="Škola pivskih sudaca">Škola pivskih sudaca</option>
+      </select>
         </div>
         <button type="submit" className="btn rounded-pill">
           Pošalji prijavu

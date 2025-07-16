@@ -41,7 +41,7 @@ function App() {
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="/pik-liga" element={<PIKliga />} />
         <Route path="/moj-profil" element={<MojProfil />} />
-        <Route path="/edukacije/skolica-kuhanja-piva" element={<KuhanjeSingle />} />
+        <Route path="/edukacije/prijava" element={<KuhanjeSingle />} />
       </Routes>
       </main>
       <Footer />
