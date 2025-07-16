@@ -25,7 +25,7 @@ const Home = () => {
           <Link className="button rounded-pill istakni" to="/prijava-za-clanstvo">POSTANI ČLAN</Link>
         </div>
         <div className="col-12 col-md-6 text-center">
-          <img src="img/pikcrew.jpeg" className="img-fluid pikclanovi center-img" alt="PIK članovi" />
+          <img src={process.env.PUBLIC_URL + '/img/pikcrew.jpeg'} className="img-fluid pikclanovi center-img" alt="PIK članovi" />
         </div>
       </div>
       </div>

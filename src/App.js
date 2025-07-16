@@ -8,7 +8,6 @@ import Header from './components/sections/Header';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import Home from './components/pages/Home';
 import ONama from './components/pages/ONama';
-import Some from './components/pages/Some';
 import Edukacije from './components/pages/Edukacije';
 import Eventi from './components/pages/Eventi';
 import PivarskiBlog from './components/pages/PivarskiBlog';
@@ -30,7 +29,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/o-nama" element={<ONama />} />
-        <Route path="/some" element={<Some />} />
         <Route path="/edukacije" element={<Edukacije />} />
         <Route path="/pivarska-zbivanja" element={<Eventi />} />
         <Route path="/pivarski-blog" element={<PivarskiBlog />} />
@@ -43,6 +41,7 @@ function App() {
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="/pik-liga" element={<PIKliga />} />
         <Route path="/moj-profil" element={<MojProfil />} />
+        <Route path="/edukacije/skolica-kuhanja-piva" element={<KuhanjeSingle />} />
       </Routes>
       </main>
       <Footer />
